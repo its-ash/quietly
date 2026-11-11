@@ -1,7 +1,7 @@
 name: quietly
 description: "Quietly: automatic phone profiles. When you reach the office, go silent. At night, Do Not Disturb."
 publish_to: 'none'
-version: 1.0.1+2
+version: 1.0.2+3
 
 environment:
   sdk: ^3.12.2
