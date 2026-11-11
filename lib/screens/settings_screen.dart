@@ -58,6 +58,7 @@ class SettingsScreen extends StatelessWidget {
                     ),
                   ],
                 ),
+              const UiAppearanceSection(),
               const UiUpdateSection(storeId: 'quietly'),
               const UiDeveloperSection(),
             ],

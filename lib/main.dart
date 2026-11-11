@@ -18,7 +18,6 @@ class QuietlyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return UiApp(
       title: 'Quietly',
-      themeMode: ThemeMode.system,
       home: HomeScreen(store: store),
     );
   }
