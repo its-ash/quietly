@@ -1,0 +1,11 @@
+{
+  "id": "quietly",
+  "name": "Quietly",
+  "repo": "its-ash/quietly",
+  "package": "com.itsash.quietly",
+  "tagline": "Automatic phone profiles: when you reach the office, go silent. At night, Do Not Disturb.",
+  "description": "Quietly changes your phone's settings for you. Make rules like \"when I'm on the office Wi-Fi, set the ringer to vibrate\", \"from 23:00 to 07:00, turn on Do Not Disturb\" or \"when my car's Bluetooth connects, set media volume to 70%\". Conditions: Wi-Fi network, time and weekdays, headphones, a Bluetooth device, charging and low battery. Actions: ringer mode, Do Not Disturb, media and ring volume, screen brightness, open an app, or show a notification. When two rules clash, the one higher in your list wins, and Quietly puts your old settings back when a rule stops. It runs in the background, starts after a reboot, and has a Quick Settings tile to pause everything. Everything stays on your phone.",
+  "category": "Utilities",
+  "icon": "assets/icon/logo-1024.png",
+  "homepage": "https://quietly.itsash.in/"
+}
