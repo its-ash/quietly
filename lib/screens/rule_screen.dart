@@ -55,13 +55,14 @@ class _RuleScreenState extends State<RuleScreen> {
     );
     if (type == null || !mounted) return;
     final condition = await editCondition(context, store, type);
-    if (condition != null) setState(() => _rule = _rule.copyWith(conditions: [..._rule.conditions, condition]));
+    if (condition == null || !mounted) return;
+    setState(() => _rule = _rule.copyWith(conditions: [..._rule.conditions, condition]));
   }
 
   Future<void> _editCondition(int i) async {
     final old = _rule.conditions[i];
     final condition = await editCondition(context, store, ConditionType.of(old), old);
-    if (condition == null) return;
+    if (condition == null || !mounted) return;
     setState(() => _rule = _rule.copyWith(conditions: [..._rule.conditions]..[i] = condition));
   }
 
@@ -83,13 +84,14 @@ class _RuleScreenState extends State<RuleScreen> {
     );
     if (type == null || !mounted) return;
     final action = await editAction(context, store, type);
-    if (action != null) setState(() => _rule = _rule.copyWith(actions: [..._rule.actions, action]));
+    if (action == null || !mounted) return;
+    setState(() => _rule = _rule.copyWith(actions: [..._rule.actions, action]));
   }
 
   Future<void> _editAction(int i) async {
     final old = _rule.actions[i];
     final action = await editAction(context, store, ActionType.of(old), old);
-    if (action == null) return;
+    if (action == null || !mounted) return;
     setState(() => _rule = _rule.copyWith(actions: [..._rule.actions]..[i] = action));
   }
 

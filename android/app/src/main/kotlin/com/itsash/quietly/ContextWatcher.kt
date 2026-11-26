@@ -130,6 +130,7 @@ class ContextWatcher(context: Context, private val onChange: () -> Unit) {
     }
 
     private fun changed() {
+        if (!started) return
         main.removeCallbacks(fire)
         main.postDelayed(fire, DEBOUNCE_MS)
     }

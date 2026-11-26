@@ -78,6 +78,7 @@ class RulesService : Service(), SharedPreferences.OnSharedPreferenceChangeListen
     }
 
     private fun evaluate() {
+        if (current !== this) return
         val rules = prefs.rules
         val outcome = RuleEngine.reconcile(rules, watcher.snapshot(), prefs.memory, runner::read, runner::canApply)
         outcome.commands.forEach(runner::run)
